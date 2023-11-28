@@ -6,11 +6,11 @@ function Header() {
     <div>
       <Navbar bg="light" expand="lg" sticky='top'>
         <LinkContainer to="/">
-          <Navbar.Brand>Academia</Navbar.Brand>
+          <Navbar.Brand className='p-lg-3'>Academia</Navbar.Brand>
         </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
+          <Nav variant='underline' className="mr-auto">
             <LinkContainer to="/home">
               <Nav.Link>Home</Nav.Link>
             </LinkContainer>
