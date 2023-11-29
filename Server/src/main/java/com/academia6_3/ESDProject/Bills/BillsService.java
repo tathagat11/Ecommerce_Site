@@ -28,6 +28,7 @@ public class BillsService {
         bills.setAmount(billsDTO.getAmount());
         bills.setBillDate(billsDTO.getBillDate());
         bills.setDeadline(billsDTO.getDeadline());
+        bills.setPaid(billsDTO.getPaid());
         Optional<Students> students = studentsRepository.findById(billsDTO.getStudentId());
         if(students.isPresent()){
             Students students1 = students.get();

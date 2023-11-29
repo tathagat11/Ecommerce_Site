@@ -29,4 +29,5 @@ public class BillsController {
     public ResponseEntity<List<Bills>> getBillsByRoll(@PathVariable Integer rollNo){
         return new ResponseEntity<>(billsService.getBillsByRoll(rollNo), HttpStatus.OK);
     }
+
 }

@@ -1,0 +1,20 @@
+.print-button {
+    background-color: black;
+    border: 0;
+    border-radius: 2px;
+}
+
+.print-button:hover{
+    background-color: rgb(218, 218, 218);
+    color: black;
+}
+.print-button:visited{
+    background-color: rgb(218, 218, 218);
+    color: black;
+}
+.print-button:active{
+    background-color: black !important;
+    color: black;
+
+}
+

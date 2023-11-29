@@ -17,4 +17,5 @@ public class BillsDTO {
     private LocalDate billDate;
     private LocalDate deadline;
     private Long studentId;
+    private Boolean paid;
 }

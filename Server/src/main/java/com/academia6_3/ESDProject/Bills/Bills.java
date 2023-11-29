@@ -38,6 +38,7 @@ public class Bills {
     @Column(name = "bill_date", nullable = false)
     private LocalDate billDate;
     private LocalDate deadline;
+    private Boolean paid;
 
     @ManyToOne
     @JoinColumn(name = "student_id", referencedColumnName = "student_id")
@@ -46,6 +47,4 @@ public class Bills {
     @JsonIgnore
     @OneToMany(mappedBy = "bills")
     private Set<StudentPayment> studentPaymentSet = new HashSet<>();
-
-
 }
