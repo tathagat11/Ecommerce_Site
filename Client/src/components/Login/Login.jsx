@@ -22,22 +22,25 @@ function Login() {
     };
 
     try {
-      const response = await axios.post(url, data, {
+      const response = await fetch(url, {
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
+        body: JSON.stringify(data),
       });
 
-      if (response.status === 200) {
+      if (response.ok) {
         console.log('Login successful!');
         toast.success('You have logged in!');
         setUserContext({ rollNo, password });
         setTimeout(() => {
           navigate('/home');
-        }, 1000);
-      } else {
-        console.error(response.status);
+        }, 2000);
+      } else if (response.status === 406) {
         toast.error('Incorrect roll number or password. Please try again.');
+      } else {
+        toast.error('Unexpected error. Please try again later.');
       }
     } catch (error) {
       console.error('Error during login:', error);
